@@ -3,7 +3,8 @@ Theme Name: Mancini Auto
 Theme URI: https://miosito.com
 Author: Francesca Cantale & Lorenzo Bartomioli
 Author URI: https://francescacantale.netlify.app
-Description: Our fantastic base theme
+Author URI : https://lorenzobartomioli.netlify.app
+Description: Dealer Car Theme
 Version: 1.0
 Requires at least: 5.0
 Tested up to: 5.4
@@ -14,3 +15,134 @@ Text Domain: manciniauto
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+
+
+:root {
+  --primary-color : #88898C;
+  --secondary-color : #E5E5E5;
+  --white: #ffff;
+  --dark : #000000;
+  --red : #BC2025;
+  --overlay: #020202;
+  --linear-gradient: #DEDEDE;
+  --font-family-sans-serif:  'Inter', sans-serif;
+  --font-family-mono-space: 'Fira Code', monospace;
+  --font-normal: 1.5rem;
+  --font-medium: 2.5rem;
+  --font-big: 3.5rem;
+
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+
+
+}
+
+.banner {
+  background-color: var( --primary-color);
+  height: 40px;
+}
+
+.banner_items {
+  display: flex;
+}
+
+.banner_items_left{
+  flex: 1;
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.banner_items_left address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  vertical-align: middle;
+}
+
+.banner_items_left .far {
+  margin-right: 5px;
+}
+
+.banner_items_left .fas {
+  margin-right: 5px;
+}
+
+
+.banner_items_right{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 70px;
+  padding: 10px;
+}
+
+.banner_items_right i {
+  margin-left: 20px;
+  font-size: 20px;
+  padding:
+}
+
+.logo-banner {
+  background-color: var(--white);
+  height: 200px;
+  display: flex;
+}
+
+.logo-banner img {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin-left: 70px;
+}
+
+.logo-banner-text {
+  flex: 1;
+  font-size: var(--font-medium);
+  line-height: 1.5;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+}
+
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 20px;
+  color: var(--white);
+ font-size: var(--font-normal);
+ font-family: var(--font-family-sans-serif);
+}
+
+.navbar ul li a:hover {
+  color: var(--red);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+}
