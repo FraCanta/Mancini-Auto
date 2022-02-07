@@ -14,9 +14,11 @@
 <header class="header" id="navbar">
 
   <div class="logo">
+    <a href="<?php echo home_url(); ?>">
    <img src="/wp-content/themes/Mancini-Auto/assets/img/logo.png" alt="">
-
+   </a>
   </div>
+  
   <nav class="navbar" >
     <?php
     wp_nav_menu(array(
@@ -29,10 +31,27 @@
   </nav>
 
 
-
   <div class="toggle_menu">
              <div class="bar1"></div>
              <div class="bar2"></div>
              <div class="bar3"></div>
          </div>
 </header>
+
+
+
+<div class="hero" style="background: url(<?php echo header_image(); ?>) no-repeat center; background-size:cover;">
+
+ <?php if(is_home()){ ?>
+
+
+ <?php } ?>
+
+ <?php if(is_page()){ ?>
+
+ <?php } ?>
+
+
+
+
+</div>

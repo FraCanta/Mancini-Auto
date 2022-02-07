@@ -42,31 +42,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 header {
   display: flex;
+  justify-content: space-between;
   height: 50px;
   width: 100%;
-  height: 100vh;
   padding: 20px;
-  background-image: url('https://images.unsplash.com/photo-1563339007-6914941198b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
 }
 
-header::after {
-  content: "";
-  background-color: rgba(44, 44, 44, 0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.hero {
+padding: 50px;
+height: 100vh;
 }
 
 .logo{
   height: 50px;
+  margin-left: 30px;
 }
 
 .logo img{
@@ -76,8 +65,8 @@ header::after {
 
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: inline-block;
+  padding: 30px;
   height: 100px;
 }
 
@@ -89,15 +78,16 @@ header::after {
 }
 
 .navbar ul li {
-  margin-right: 20px;
+  display: inline-block;
   color: rgb(255, 255, 255);
 }
 
 .navbar ul li a {
+  padding: 10px;
   font-size: 15px;
   color: var(--dark);
   letter-spacing: 0.3px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   font-family: var(--font-family-sans-serif);
 }
@@ -121,6 +111,11 @@ header::after {
 }
 
 
+.container {
+
+}
+
+
 
 @media screen and (max-width:768px){
 header {
@@ -137,8 +132,8 @@ header {
     -webkit-backdrop-filter: blur(5px);
     -moz-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    width: 100%;
-    min-height: 50vh;
+    min-width: 100%;
+    min-height: 100%;
     position: absolute;
     top: 60px;
     left: 60px;
@@ -169,28 +164,54 @@ header {
     height: 30px;
   }
 
-  .hero_items-right address {
-    font-size: 20px;
-    padding: 0;
-  }
 
   .navbar ul li a {
-    display: block;
+    display: inline-block;
     color: white;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 15px;
     font-family: var(--font-family-sans-serif);
   }
 
   @keyframes slideIn {
     0% {
       opacity: 0;
-      transform: translateX(0);
+      transform: translateX(100%);
     }
     100% {
       opacity: 1;
-      transform: translateX(-100%);
+      transform: translateX(0);
     }
   }
 
+}
+
+#loghetti {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+#loghetti .wp-block-column{
+  width: 50px;
+  height: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+#loghetti .wp-block-image {
+    margin: 0 0 1em;
+    padding: 20px;
+}
+
+#immagini{
+  padding: 50px;
+  margin: 0 auto;
+  margin-left: 60px;
+}
+
+#immagini img {
+  width: 250px;
+  height: 250px;
 }

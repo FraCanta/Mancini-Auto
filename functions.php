@@ -2,7 +2,12 @@
 
 
 function mancini_auto_support() {
+
+  add_theme_support('custom-header');
+
 	add_theme_support('title-tag');
+
+	add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme', 'mancini_auto_support');
@@ -19,7 +24,7 @@ function mancini_auto_menus(){
 
 add_action('init', 'mancini_auto_menus');
 
-
+// ----- Setup CSS -------
  function mancini_auto_styles(){
    $version = wp_get_theme()->get('Version');
    wp_enqueue_style('mancini_auto-style', get_template_directory_uri() ."/style.css", array('mancini_auto-bootstrap'), $version, 'all');

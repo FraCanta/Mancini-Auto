@@ -7,9 +7,10 @@
 
 
     <?php the_content(esc_html__('Read More...', 'slug-theme'));?>
+    
 
   <?php endwhile; ?>
-    
+
   <?php else : ?>
     <p><?php esc_html_e('Sorry, no posts matched your criteria.', 'slug-theme'); ?></p>
   <?php endif; ?>
