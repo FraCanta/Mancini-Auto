@@ -1,4 +1,6 @@
 <?php
+
+
 function mancini_auto_support() {
 	add_theme_support('title-tag');
 }
@@ -30,7 +32,7 @@ add_action('init', 'mancini_auto_menus');
 
 
  function mancini_auto_scripts(){
-	 
+
 	 wp_enqueue_script('mancini_auto-popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js', array(), '2.10.2', true);
 	 wp_enqueue_script('mancini_auto-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js', array(), '5.1.3', true);
 	 wp_enqueue_script('mancini_auto-js', get_template_directory_uri()."/assets/js/main.js", array(), '1.0', true);
